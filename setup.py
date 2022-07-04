@@ -9,7 +9,7 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 
 setuptools.setup(
     name="testpackagepower",
-    version= "0.0.3",
+    version= "0.0.4",
     url="https://github.com/MauricioSalazare/testpackagepower",
     author="Mauricio Salazar",
     author_email="e.m.salazar.duque@tue.nl",
