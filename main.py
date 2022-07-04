@@ -1,16 +1,19 @@
-# This is a sample Python script.
+import numpy as np
+from testpackagepower import compute_function, load_line
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+if __name__ == "__main__":
 
+    result = compute_function(2, 4)
+    print(f"Result: {result}")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    # This is a shitty thing to do
+    values = np.linspace(1, 10, 100)
 
+    all_results = []
+    for value in values:
+        all_results.append(compute_function(value, value * 2))
+    all_results = np.array(all_results)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    info = load_line()
+    print(info)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

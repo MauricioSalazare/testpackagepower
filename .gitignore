@@ -1,1 +1,7 @@
+build/
+dist/
+testpackagepower.egg-info/
 .idea/
+*.pyc
+*.pyd
+*.xml
