@@ -9,13 +9,14 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 
 setuptools.setup(
     name="testpackagepower",
-    version= "0.0.2",
+    version= "0.0.3",
     url="https://github.com/MauricioSalazare/testpackagepower",
     author="Mauricio Salazar",
     author_email="e.m.salazar.duque@tue.nl",
     description="This package does nothing",
     long_description=open('README.md').read(),
-    packages=setuptools.find_packages(),
+    # packages=setuptools.find_packages(),
+    packages=setuptools.find_namespace_packages(),
     install_requires=requires_list,
     classifiers=[
         "Programming Language :: Python :: 3",
