@@ -3,6 +3,7 @@ dist/
 testpackagepower.egg-info/
 .idea/
 .ipynb_checkpoints/
+examples/.ipynb_checkpoints/
 *.pyc
 *.pyd
 *.xml
