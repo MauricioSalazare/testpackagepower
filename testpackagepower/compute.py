@@ -9,4 +9,4 @@ def compute_function(a: float, b: float) -> float:
     :param b: Second value
     :return: Result
     """
-    return np.power(a, 2) + np.power(b, 3) + 10 + 40
+    return np.power(a, 2) + np.power(b, 3) + 10 + 40 + 500

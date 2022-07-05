@@ -1,16 +1,17 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel", "numpy"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "testpackagepower"
-version = "0.0.5"
-repository = "https://github.com/MauricioSalazare/testpackagepower"
+version = "0.0.6"
+urls = {repository = "https://github.com/MauricioSalazare/testpackagepower"}
 authors = [{author = "Mauricio Salazar", email = "e.m.salazar.duque@tue.nl"},]
 description = "This package does nothing"
 readme = "README.md"
 keywords = ["test", "python"]
-license = { file = "LICENSE" }
+#license = { file = "LICENSE" }
+license = {text = "MIT"}
 classifiers = ["Programming Language :: Python :: 3",
                "License :: OSI Approved :: MIT License",
                "Operating System :: OS Independent",]
@@ -21,9 +22,5 @@ requires-python = ">=3.7"
 [tool.setuptools]
 include-package-data = true  # This is true by default, add files in MANIFEST.in
 
-#[tool.setuptools.packages.find]
-#namespaces = true
-#where = ["testpackagepower"]
-
 [tool.setuptools.package-data]
-"*" = ["*.csv"]  # This pushces all .csv files of the package. Even if not in MANIFEST.in
+"*" = ["*.csv"]  # This pushces all .csv files of the package. Even if they are not in MANIFEST.in
