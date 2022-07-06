@@ -6,12 +6,19 @@ build-backend = "setuptools.build_meta"
 name = "testpackagepower"
 version = "0.0.6"
 urls = {repository = "https://github.com/MauricioSalazare/testpackagepower"}
+
+#[project.urls]
+#homepage = "https://example.com"
+#documentation = "https://readthedocs.org"
+#repository = "https://github.com"
+#changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
 authors = [{author = "Mauricio Salazar", email = "e.m.salazar.duque@tue.nl"},]
 description = "This package does nothing"
 readme = "README.md"
-keywords = ["test", "python"]
-#license = { file = "LICENSE" }
+keywords = ["testupload", "pythonpackaging"]
 license = {text = "MIT"}
+#license = { file = "LICENSE" }
 classifiers = ["Programming Language :: Python :: 3",
                "License :: OSI Approved :: MIT License",
                "Operating System :: OS Independent",]
@@ -19,8 +26,12 @@ dependencies = ["numpy",
                 "pandas",]
 requires-python = ">=3.7"
 
-[tool.setuptools]
-include-package-data = true  # This is true by default, add files in MANIFEST.in
+[project.optional-dependencies]
+dev = ["build", "twine", "matplotlib", "jupyterlab"]
+test = ["pytest >=2.7.3"]
+doc = ["sphinx"]
 
-[tool.setuptools.package-data]
-"*" = ["*.csv"]  # This pushces all .csv files of the package. Even if they are not in MANIFEST.in
+[tool.setuptools]
+include-package-data = true
+package-data = {"*" = ["*.csv"]}  # Automatically enables include-package-data=true
+
